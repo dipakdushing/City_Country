@@ -41,7 +41,8 @@ const AddCity = () => {
      e.preventDefault();
      if(!id || !country || !city || !population){
        setError("Please Fill All The Details..");
-     }else{
+     }
+    else{
        dispatch(addCity(state));
        navigate("/");
        setError("");
@@ -52,14 +53,15 @@ const AddCity = () => {
   return (
     <div>
     <Button 
-    style={{width:"100px",marginTop:'30px'}}
+    style={{width:"120px",marginTop:'25px'}}
     color="secondary" 
     variant="contained"
     onClick={()=> navigate("/")}
     >Back
     </Button>
 
-    <h2>Add CITY</h2>
+    <h2>Add A CITY</h2>
+
     {error ? <h3 style={{color:"red",fontSize:"15px"}}>{error}</h3> : null}
 
     <form className={classes.root} noValidate autoComplete="off" onSubmit={handleSubmit}>

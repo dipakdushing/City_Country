@@ -22,10 +22,6 @@ const useButtonStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems:"end",
    
-    // '& > *': {
-    //   margin: theme.spacing(1),
-      
-    // },
   },
 }));
 
@@ -35,7 +31,7 @@ const StyledTableCell = withStyles((theme) => ({
       color: theme.palette.common.white,
     },
     body: {
-      fontSize: 14,
+      fontSize: 15,
     },
   }))(TableCell);
   
@@ -84,7 +80,7 @@ const Home = () => {
     },[]);
 
     const handleDelete = (id) => {
-      if(window.confirm("Are You Surely Delete This.....?")){
+      if(window.confirm("Are You Surely Delete This...?")){
          dispatch(deleteCity(id))
       }
    
@@ -94,7 +90,7 @@ const Home = () => {
     <div>
       <div style={{alignItems:"center",marginTop:"30px"}}>
         <input type="text" placeholder='Filter by Country' className='search-box' style={{marginRight:"40px",height:"34px", width:"160px"}} onChange={e => {
-          // dispatch(filter(e.target.value));
+          
           setFilter(e.target.value)
         }}/>
       <Button color="primary" variant="contained" onClick={()=> navigate("/add-city")}>Add Data</Button>
@@ -107,6 +103,7 @@ const Home = () => {
 
       </select>
       </div>
+
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
@@ -119,12 +116,14 @@ const Home = () => {
             <StyledTableCell align="center">Delete</StyledTableCell>
           </TableRow>
         </TableHead>
+
         <TableBody>
           { cities && cities.filter(city => city.country.includes(filter)).map((elem) => (
             <StyledTableRow key={elem.id}>
               <StyledTableCell component="th" scope="row" align="center">
                 {elem.id}
               </StyledTableCell>
+
               <StyledTableCell align="center">{elem.country}</StyledTableCell>
               <StyledTableCell align="right">{elem.city}</StyledTableCell>
               <StyledTableCell align="right">{elem.population}</StyledTableCell>

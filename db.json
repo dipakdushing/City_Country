@@ -1,0 +1,58 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "India"
+    },
+    {
+      "id": 2,
+      "name": "Bangladesh"
+    },
+    {
+      "id": 3,
+      "name": "Germany"
+    },
+    {
+      "id": 4,
+      "name": "Japan"
+    }
+  ],
+  "cities": [
+    {
+      "id": 1,
+      "city": "Mumbai",
+      "country": "India",
+      "population": "45990231"
+    },
+    {
+      "id": 2,
+      "city": "Dhaka",
+      "country": "Bangladesh",
+      "population": 20283552
+    },
+    {
+      "id": 4,
+      "city": "Osaka",
+      "country": "Japan",
+      "population": 19222665
+    },
+    {
+      "id": 5,
+      "city": "Delhi",
+      "country": "India",
+      "population": 29399141
+    },
+    {
+      "id": "9",
+      "country": "India",
+      "city": "Kolkata",
+      "population": "50004986"
+    },
+    {
+      "id": "7",
+      "country": "USA",
+      "city": "Malbone",
+      "population": "8090543"
+    }
+  ]
+}
